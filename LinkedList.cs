@@ -118,7 +118,7 @@ namespace martin_linkedlist
             return foundData;
         }
                 
-        public bool Contains(string containData)
+        public Node Contains(string containData)
         {
             _search = _head;
 
@@ -126,11 +126,11 @@ namespace martin_linkedlist
             { 
                 if (_search.Data == containData)
                 {
-                    return foundData;
+                    return _search;
                 }
                 _search = _search.Next;
             }
-            return lostData;
+            return _search;
         }
 
         public void PrintAllNodes()

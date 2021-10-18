@@ -78,17 +78,15 @@ namespace martin_linkedlist
                     {
                         Console.Write("Please search an item: ");
                         userInput = Console.ReadLine().ToLower();
-                        if(ll.Contains(userInput))
+                        Node itemSearched = new Node();
+                        itemSearched = ll.Contains(userInput);
+                        if(itemSearched != null)
                         {
-                            Console.WriteLine("");
-                            Console.WriteLine(userInput + " was found.");
-                            Console.WriteLine("");
+                            Console.WriteLine("Item " +  itemSearched.Data + " was found.");
                         }
                         else
                         {
-                            Console.WriteLine("");
-                            Console.WriteLine("Item " + userInput + " was not found.");
-                            Console.WriteLine("");
+                            Console.WriteLine("No Data Found");
                         }
                         break;
                     }
